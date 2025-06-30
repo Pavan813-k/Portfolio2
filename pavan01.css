@@ -402,7 +402,17 @@ span{
     width: 250px;
     padding: 20px;
     transition: transform 0.2s;
+    opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: none;
 }
+.project-card.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .project-card:hover {
     border: 7px solid orangered;
     border-block-end: #e44d26;
@@ -446,6 +456,7 @@ span{
   color: orange;
   text-shadow: 0 0 25px orange, 0 0 50px orange;
 }
+
 
 
 

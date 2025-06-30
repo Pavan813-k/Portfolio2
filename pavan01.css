@@ -403,7 +403,7 @@ span{
     padding: 20px;
 }
 .project-card:hover {
-    border: 3px solid (45deg, orangered, yellow);
+    border: 3px solid orangered;
     border-block-end: #e44d26;
     transform: scale(1.05)translateY(-5px);
 }

@@ -5,23 +5,29 @@ buttons.forEach(button => {
   button.addEventListener('click', () => {
     const filter = button.getAttribute('data-filter');
 
-    projects.forEach(project => {
-      if (filter === 'all') {
-        project.style.display = 'block';
-      } else {
-        if (project.classList.contains(filter)) {
+    projects.forEach((project, index) => {
+      project.classList.remove('show'); // remove any previous animation
+      project.style.display = 'none';   // hide all cards first
+
+      const match = filter === 'all' || project.classList.contains(filter);
+
+      if (match) {
+        // Delay each animation for staggered effect
+        setTimeout(() => {
           project.style.display = 'block';
-        } else {
-          project.style.display = 'none';
-        }
+          project.classList.add('show');
+        }, index * 100);
       }
     });
   });
 });
 
-// Show all projects on initial load
+// Show all projects with animation on first load
 window.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.project-card').forEach(card => {
-    card.style.display = 'block';
+  projects.forEach((card, index) => {
+    setTimeout(() => {
+      card.style.display = 'block';
+      card.classList.add('show');
+    }, index * 100);
   });
 });

@@ -401,7 +401,6 @@ span{
     box-shadow: 0 0 10px yellow, 0 0 15px red;
     width: 250px;
     padding: 20px;
-    transition: transform 0.2s;
 }
 .project-card:hover {
     border: 7px solid orangered;

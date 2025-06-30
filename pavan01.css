@@ -396,10 +396,17 @@ span{
 }
 
 .project-card {
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px yellow, 0 0 15px red;
+    width: 250px;
+    padding: 20px;
+    transition: transform 0.2s;
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-      display: none;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease, transform 0.4s ease-out;
+  display: none;
+
 }
 .project-card.show {
   display: block;
